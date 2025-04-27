@@ -67,6 +67,10 @@ classDiagram
     class Discusión{
         +temas tratados: list
         +participantes: list
+        +lugar: str
+        +duración: int
+        +hora de inicio: int
+
 
     }
     Lector_proponente_oponente"1-10" --> "1" Obra_leída : lee()
@@ -74,4 +78,4 @@ classDiagram
     Lector_proponente_oponente"1-10" -->  Multimedia: consume()
     Obra_leída"1-10" -->  "1-"Personaje: posee()
     Lector_proponente_oponente"1-10" -->  Discusión: participar()
-    Discusión --> Obra_leída: referenciar()
+    Discusión --> Obra_leída: referencia()
